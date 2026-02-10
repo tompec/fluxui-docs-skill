@@ -6,8 +6,6 @@ components_used: [card, heading, text]
 
 Flux's Chart component is a lightweight, zero-dependency tool for building charts in your Livewire applications. It is designed to be simple but extremely flexible, so that you can assemble and style your charts exactly as you need them.
 
-Currently, Flux supports line and area charts. Additional chart types are planned for future releases.
-
 ```blade
 <flux:chart wire:model="data" class="aspect-3/1">
     <flux:chart.svg>
@@ -45,9 +43,9 @@ use Livewire\Component;
 class Dashboard extends Component
 {
     public array $data = [
-        ['date' => '2026-01-30', 'visitors' => 267],
-        ['date' => '2026-01-29', 'visitors' => 259],
-        ['date' => '2026-01-28', 'visitors' => 269],
+        ['date' => '2026-02-10', 'visitors' => 267],
+        ['date' => '2026-02-09', 'visitors' => 259],
+        ['date' => '2026-02-08', 'visitors' => 269],
         // ...
     ];
 }
@@ -173,6 +171,134 @@ You can plot multiple lines in the same chart by including multiple <flux:chart.
 ```
 
 You might have noticed that the above example includes a <flux:chart.viewport> component. This is used to constrain the chart SVG within the chart component so that you can render siblings like legends or summaries above or below it.
+
+## Bar chart
+
+To create a bar chart, you can include the <flux:chart.bar> component in the <flux:chart.svg> component:
+
+```blade
+<flux:chart wire:model="data" class="aspect-[3/1]">
+    <flux:chart.svg>
+        <flux:chart.bar field="revenue" class="text-blue-500" radius="0" width="85%" />
+
+        <flux:chart.axis axis="x" field="date" tick-count="10">
+            <flux:chart.axis.tick />
+            <flux:chart.axis.line />
+        </flux:chart.axis>
+
+        <flux:chart.axis axis="y" :format="['useGrouping' => true]" tick-prefix="$">
+            <flux:chart.axis.grid />
+            <flux:chart.axis.tick />
+        </flux:chart.axis>
+
+        <flux:chart.cursor type="area" />
+    </flux:chart.svg>
+
+    <flux:chart.tooltip>
+        <flux:chart.tooltip.heading field="date" />
+        <flux:chart.tooltip.value field="revenue" label="Revenue" :format="['useGrouping' => true]" prefix="$" />
+    </flux:chart.tooltip>
+</flux:chart>
+blade
+<flux:chart wire:model="data" class="aspect-[3/1]">
+    <flux:chart.svg>
+        <flux:chart.bar field="tickets" class="text-blue-300 dark:text-blue-700" />
+
+        <flux:chart.axis axis="x" field="month">
+            <flux:chart.axis.tick />
+        </flux:chart.axis>
+
+        <flux:chart.axis axis="y">
+            <flux:chart.axis.grid />
+            <flux:chart.axis.tick />
+        </flux:chart.axis>
+    </flux:chart.svg>
+
+    <flux:chart.tooltip>
+        <flux:chart.tooltip.value field="tickets" label="Tickets" />
+    </flux:chart.tooltip>
+</flux:chart>
+```
+
+## Grouped bar chart
+
+To create a grouped bar chart, you can wrap multiple <flux:chart.bar> components inside a single <flux:chart.group> component:
+
+```blade
+<flux:chart wire:model="data">
+    <flux:chart.viewport class="aspect-[3/1]">
+        <flux:chart.svg>
+            <flux:chart.group>
+                <flux:chart.bar field="chrome" class="text-blue-600" />
+                <flux:chart.bar field="firefox" class="text-blue-500" />
+                <flux:chart.bar field="safari" class="text-blue-300" />
+            </flux:chart.group>
+
+            <flux:chart.axis axis="x" field="year">
+                <flux:chart.axis.tick />
+                <flux:chart.axis.line />
+            </flux:chart.axis>
+
+            <flux:chart.axis axis="y">
+                <flux:chart.axis.grid />
+                <flux:chart.axis.tick />
+            </flux:chart.axis>
+        </flux:chart.svg>
+    </flux:chart.viewport>
+
+    <div class="flex justify-center gap-4 pt-4">
+        <flux:chart.legend label="Chrome">
+            <flux:chart.legend.indicator class="bg-blue-600" />
+        </flux:chart.legend>
+        <flux:chart.legend label="Firefox">
+            <flux:chart.legend.indicator class="bg-blue-500" />
+        </flux:chart.legend>
+        <flux:chart.legend label="Safari">
+            <flux:chart.legend.indicator class="bg-blue-300" />
+        </flux:chart.legend>
+    </div>
+</flux:chart>
+```
+
+## Stacked bar chart
+
+To create a stacked bar chart, you can wrap multiple <flux:chart.bar> components inside a single <flux:chart.stack> component:
+
+```blade
+<flux:chart wire:model="data">
+    <flux:chart.viewport class="aspect-[3/1]">
+        <flux:chart.svg>
+            <flux:chart.stack width="65%">
+                <flux:chart.bar field="online" class="text-blue-600" />
+                <flux:chart.bar field="retail" class="text-blue-400" />
+                <flux:chart.bar field="wholesale" class="text-blue-300" radius="4 0" />
+            </flux:chart.stack>
+
+            <flux:chart.axis axis="x" field="category">
+                <flux:chart.axis.tick />
+                <flux:chart.axis.line />
+            </flux:chart.axis>
+
+            <flux:chart.axis axis="y">
+                <flux:chart.axis.grid />
+                <flux:chart.axis.tick />
+            </flux:chart.axis>
+        </flux:chart.svg>
+    </flux:chart.viewport>
+
+    <div class="flex justify-center gap-4 pt-4">
+        <flux:chart.legend label="Online">
+            <flux:chart.legend.indicator class="bg-blue-600" />
+        </flux:chart.legend>
+        <flux:chart.legend label="Retail">
+            <flux:chart.legend.indicator class="bg-blue-400" />
+        </flux:chart.legend>
+        <flux:chart.legend label="Wholesale">
+            <flux:chart.legend.indicator class="bg-blue-300" />
+        </flux:chart.legend>
+    </div>
+</flux:chart>
+```
 
 ## Live summary
 

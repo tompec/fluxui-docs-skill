@@ -11,7 +11,7 @@ A flexible calendar component for date selection. Supports single dates, multipl
 Set the initial selected date using the value prop with a Y-m-d formatted date string:
 
 ```blade
-<flux:calendar value="2026-01-30" />
+<flux:calendar value="2026-02-10" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -49,7 +49,7 @@ Set multiple selected dates using a comma-separated list in the value prop:
 ```blade
 <flux:calendar
     multiple
-    value="2026-01-02,2026-01-05,2026-01-15"
+    value="2026-02-02,2026-02-05,2026-02-15"
 />
 ```
 
@@ -89,7 +89,7 @@ Select a range of dates.
 Set the initial range using the value prop with a start and end date separated by a forward slash:
 
 ```blade
-<flux:calendar mode="range" value="2026-01-02/2026-01-06" />
+<flux:calendar mode="range" value="2026-02-02/2026-02-06" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -170,7 +170,7 @@ Create a non-interactive calendar for display purposes.
 ```blade
 <flux:calendar
     static
-    value="2026-01-30"
+    value="2026-02-10"
     size="xs"
     :navigation="false"
 />
@@ -180,7 +180,7 @@ Create a non-interactive calendar for display purposes.
 Restrict the selectable date range by setting minimum and maximum boundaries.
 
 ```blade
-<flux:calendar max="2026-01-30" />
+<flux:calendar max="2026-02-10" />
 ```
 
 You can also use the convenient "today" shorthand:
@@ -197,7 +197,7 @@ You can also use the convenient "today" shorthand:
 Disable specific dates from being selected. Useful for blocking out holidays, showing booked dates, or indicating unavailable time slots.
 
 ```blade
-<flux:calendar unavailable="2026-01-29,2026-01-31" />
+<flux:calendar unavailable="2026-02-09,2026-02-11" />
 ```
 
 ## With today shortcut
@@ -430,3 +430,10 @@ A specialized object for handling date ranges when using \`mode="range"\`.
 | DateRange::thisYear() | Create a DateRange for the current year. |
 | DateRange::lastYear() | Create a DateRange for the previous year. |
 | DateRange::yearToDate() | Create a DateRange from January 1st to today. |
+| DateRange::tomorrow() | Create a DateRange for tomorrow. |
+| DateRange::nextWeek() | Create a DateRange for next week. |
+| DateRange::next7Days() | Create a DateRange for the next 7 days. |
+| DateRange::next30Days() | Create a DateRange for the next 30 days. |
+| DateRange::nextMonth() | Create a DateRange for next month. |
+| DateRange::nextQuarter() | Create a DateRange for next quarter. |
+| DateRange::nextYear() | Create a DateRange for next year. |

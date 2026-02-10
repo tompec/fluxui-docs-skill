@@ -17,7 +17,7 @@ Use date inputs instead of date pickers for far-future or past events such as bi
 Set the initial selected date using the value prop with a Y-m-d formatted date string:
 
 ```blade
-<flux:date-picker value="2026-01-30" />
+<flux:date-picker value="2026-02-10" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -71,7 +71,7 @@ Enable selection of date ranges for reporting, booking systems, or any scenario 
 Set the initial range using the value prop with a start and end date separated by a forward slash:
 
 ```blade
-<flux:date-picker mode="range" value="2026-01-02/2026-01-06" />
+<flux:date-picker mode="range" value="2026-02-02/2026-02-06" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -182,6 +182,16 @@ Below is a list of all available presets.
 | last3Months | Last 3 Months | DateRange::last3Months() | Previous 3 months |
 | last6Months | Last 6 Months | DateRange::last6Months() | Previous 6 months |
 | yearToDate | Year to Date | DateRange::yearToDate() | January 1st to today |
+| tomorrow | Tomorrow | DateRange::tomorrow() | Next day |
+| nextWeek | Next Week | DateRange::nextWeek() | Next week |
+| next7Days | Next 7 Days | DateRange::next7Days() | Next 7 days from today |
+| nextMonth | Next Month | DateRange::nextMonth() | Next month |
+| nextQuarter | Next Quarter | DateRange::nextQuarter() | Next quarter |
+| nextYear | Next Year | DateRange::nextYear() | Next year |
+| next14Days | Next 14 Days | DateRange::next14Days() | Next 14 days from today |
+| next30Days | Next 30 Days | DateRange::next30Days() | Next 30 days from today |
+| next3Months | Next 3 Months | DateRange::next3Months() | Next 3 months from today |
+| next6Months | Next 6 Months | DateRange::next6Months() | Next 6 months from today |
 | allTime | All Time | DateRange::allTime($start) | Minimum supplied date to today |
 | custom | Custom Range | DateRange::custom() | User-defined date range |
 
@@ -225,7 +235,7 @@ When a user selects a custom date range that doesn't match any other preset, the
 Disable specific dates from being selected. Useful for blocking out holidays, showing booked dates, or indicating unavailable time slots.
 
 ```blade
-<flux:date-picker unavailable="2026-01-29,2026-01-31" />
+<flux:date-picker unavailable="2026-02-09,2026-02-11" />
 ```
 
 ## With today shortcut
@@ -551,4 +561,11 @@ A specialized object for handling date ranges when using mode="range".
 | DateRange::thisYear() | Create a DateRange for the current year. |
 | DateRange::lastYear() | Create a DateRange for the previous year. |
 | DateRange::yearToDate() | Create a DateRange from January 1st to today. |
+| DateRange::tomorrow() | Create a DateRange for tomorrow. |
+| DateRange::nextWeek() | Create a DateRange for next week. |
+| DateRange::next7Days() | Create a DateRange for the next 7 days. |
+| DateRange::next30Days() | Create a DateRange for the next 30 days. |
+| DateRange::nextMonth() | Create a DateRange for next month. |
+| DateRange::nextQuarter() | Create a DateRange for next quarter. |
+| DateRange::nextYear() | Create a DateRange for next year. |
 | DateRange::allTime() | Create a DateRange with no limits. |

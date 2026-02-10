@@ -147,7 +147,7 @@ If you need to perform some logic after a modal closes, you can register a close
 You can also use wire:close or x-on:close if you prefer those syntaxes.
 
 ## Cancel events
-If you need to perform some logic after a modal is cancelled, you can register a cancel listener like so:
+If you need to perform some logic after a modal is cancelled by clicking outside or pressing escape, you can register a cancel listener like so:
 
 ```blade
 <flux:modal @cancel="someLivewireAction">
