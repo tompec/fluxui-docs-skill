@@ -28,10 +28,10 @@ Because using the field component in its full form can be verbose and repetitive
 ## Class targeting
 Unlike other form components, Flux's input component is composed of two underlying elements: an input element and a wrapper div. The wrapper div is there to add padding where icons should go.
 
-This is typically fine, however, if you need to pass classes into the input component and have them directly applied to the input element, you can do so using the class:input attribute instead of simply class:
+This is typically fine, however, if you need to pass classes into the input component and have them directly applied to the input element, you can do so using the input:class attribute instead of simply class:
 
 ```blade
-<flux:input class="max-w-xs" class:input="font-mono" />
+<flux:input class="max-w-xs" input:class="font-mono" />
 ```
 
 ## Types
@@ -218,7 +218,7 @@ If you want to use an input group in a form field with a label, you will need to
 | copyable | If true, displays a copy button to copy the input's content (https only). |
 | viewable | For password inputs, displays a toggle to show/hide the password. |
 | as | Render the input as a different element. Options: button. Default: input. |
-| class:input | CSS classes applied directly to the input element instead of the wrapper. |
+| input:class | CSS classes applied directly to the input element instead of the wrapper. |
 
 | Slot | Description |
 | --- | --- |

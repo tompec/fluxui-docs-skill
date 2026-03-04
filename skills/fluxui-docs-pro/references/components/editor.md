@@ -227,7 +227,11 @@ To do this, you'll first need to create a listener for the flux:editor event in 
 ```
 <head>
     ...
-
+    <script type="module">
+        document.addEventListener('flux:editor', (e) => {
+            ...
+        })
+    </script>
 </head>
 ```
 

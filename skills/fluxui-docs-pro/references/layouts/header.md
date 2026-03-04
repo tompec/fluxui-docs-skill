@@ -12,35 +12,15 @@ Layouts
 
 Components
 
-[Accordion](/components/accordion) [Autocomplete](/components/autocomplete) [Avatar](/components/avatar) [Badge](/components/badge) [Brand](/components/brand) [Button](/components/button) [Breadcrumbs](/components/breadcrumbs) [Calendar](/components/calendar) [Callout](/components/callout) [Card](/components/card) [Chart](/components/chart) [Checkbox](/components/checkbox) [Command](/components/command) [Context](/components/context) [Composer
+[Accordion](/components/accordion) [Autocomplete](/components/autocomplete) [Avatar](/components/avatar) [Badge](/components/badge) [Brand](/components/brand) [Button](/components/button) [Breadcrumbs](/components/breadcrumbs) [Calendar](/components/calendar) [Callout](/components/callout) [Card](/components/card) [Chart](/components/chart) [Checkbox](/components/checkbox) [Command](/components/command) [Context](/components/context) [Composer](/components/composer) [Date picker](/components/date-picker) [Dropdown](/components/dropdown) [Editor](/components/editor) [Field](/components/field) [File upload](/components/file-upload) [Heading](/components/heading) [Icon](/components/icon) [Input](/components/input) [Kanban](/components/kanban) [Modal](/components/modal) [Navbar](/components/navbar) [OTP Input](/components/otp-input) [Pagination](/components/pagination) [Pillbox](/components/pillbox) [Popover](/components/popover) [Profile](/components/profile) [Progress
 
 New
 
-](/components/composer)[Date picker](/components/date-picker) [Dropdown](/components/dropdown) [Editor](/components/editor) [Field](/components/field) [File upload](/components/file-upload) [Heading](/components/heading) [Icon](/components/icon) [Input](/components/input) [Kanban
+](/components/progress)[Radio](/components/radio) [Select](/components/select) [Separator](/components/separator) [Skeleton](/components/skeleton) [Slider](/components/slider) [Switch](/components/switch) [Table](/components/table) [Tabs](/components/tabs) [Text](/components/text) [Textarea](/components/textarea) [Time picker](/components/time-picker) [Timeline
 
 New
 
-](/components/kanban)[Modal](/components/modal) [Navbar](/components/navbar) [OTP Input
-
-New
-
-](/components/otp-input)[Pagination](/components/pagination) [Pillbox
-
-New
-
-](/components/pillbox)[Popover](/components/popover) [Profile](/components/profile) [Radio](/components/radio) [Select
-
-New
-
-](/components/select)[Separator](/components/separator) [Skeleton
-
-New
-
-](/components/skeleton)[Slider
-
-New
-
-](/components/slider)[Switch](/components/switch) [Table](/components/table) [Tabs](/components/tabs) [Text](/components/text) [Textarea](/components/textarea) [Time picker](/components/time-picker) [Toast](/components/toast) [Tooltip](/components/tooltip)
+](/components/timeline)[Toast](/components/toast) [Tooltip](/components/tooltip)
 
 [Fullscreen](/demo/header)
 

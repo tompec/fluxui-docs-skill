@@ -43,6 +43,7 @@ Use `components_used` to find related components and real-world usage patterns.
 - **[OTP Input](references/components/otp-input.md)**: Capture one-time passwords with a series of individual input fields.
 - **[Pagination](references/components/pagination.md)**: Display a series of buttons to navigate through a list of items.
 - **[Profile](references/components/profile.md)**: Display a user's profile with an avatar and optional name in a compact, interactive component.
+- **[Progress](references/components/progress.md)**: A simple progress bar to indicate completion or loading status.
 - **[Radio](references/components/radio.md)**: Select one option from a set of mutually exclusive choices. Perfect for single-choice questions a...
 - **[Select](references/components/select.md)**: Choose a single option from a dropdown list.
 - **[Separator](references/components/separator.md)**: Visually divide sections of content or groups of items.

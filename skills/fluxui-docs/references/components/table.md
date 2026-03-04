@@ -120,6 +120,20 @@ Allow users to navigate through different pages of data by passing in any model 
 </flux:table>
 ```
 
+## Scroll to top
+
+Use the pagination:scroll-to prop to scroll the page when a pagination button is clicked. By default, it scrolls to the body element.
+
+```blade
+<flux:table :paginate="$orders" pagination:scroll-to />
+```
+
+You can also target a specific element by passing a CSS selector.
+
+```blade
+<flux:table :paginate="$orders" pagination:scroll-to="#orders" />
+```
+
 ## Sortable
 Allow users to sort rows by specific columns using a combination of the sortable, sorted, and direction props.
 
@@ -182,6 +196,7 @@ Make sure to set a background color on columns and cells to prevent content over
 | Prop | Description |
 | --- | --- |
 | paginate | A Laravel paginator instance to enable pagination. |
+| pagination:scroll-to | Scroll to an element when a pagination button is clicked. Pass a CSS selector to target a specific element. Default: body. |
 | container:class | Additional CSS classes applied to the container. Useful for setting height constraints like max-h-80. |
 
 | Attribute | Description |

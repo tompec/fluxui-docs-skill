@@ -11,7 +11,7 @@ A flexible calendar component for date selection. Supports single dates, multipl
 Set the initial selected date using the value prop with a Y-m-d formatted date string:
 
 ```blade
-<flux:calendar value="2026-02-10" />
+<flux:calendar value="2026-03-04" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -49,7 +49,7 @@ Set multiple selected dates using a comma-separated list in the value prop:
 ```blade
 <flux:calendar
     multiple
-    value="2026-02-02,2026-02-05,2026-02-15"
+    value="2026-03-02,2026-03-05,2026-03-15"
 />
 ```
 
@@ -89,7 +89,7 @@ Select a range of dates.
 Set the initial range using the value prop with a start and end date separated by a forward slash:
 
 ```blade
-<flux:calendar mode="range" value="2026-02-02/2026-02-06" />
+<flux:calendar mode="range" value="2026-03-02/2026-03-06" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -170,7 +170,7 @@ Create a non-interactive calendar for display purposes.
 ```blade
 <flux:calendar
     static
-    value="2026-02-10"
+    value="2026-03-04"
     size="xs"
     :navigation="false"
 />
@@ -180,7 +180,7 @@ Create a non-interactive calendar for display purposes.
 Restrict the selectable date range by setting minimum and maximum boundaries.
 
 ```blade
-<flux:calendar max="2026-02-10" />
+<flux:calendar max="2026-03-04" />
 ```
 
 You can also use the convenient "today" shorthand:
@@ -197,7 +197,7 @@ You can also use the convenient "today" shorthand:
 Disable specific dates from being selected. Useful for blocking out holidays, showing booked dates, or indicating unavailable time slots.
 
 ```blade
-<flux:calendar unavailable="2026-02-09,2026-02-11" />
+<flux:calendar unavailable="2026-03-03,2026-03-05" />
 ```
 
 ## With today shortcut
@@ -232,13 +232,13 @@ By default, the first day of the week will be automatically set based on the use
 Set the date that the calendar will open to, if there is no selected date.
 
 ```blade
-<flux:calendar open-to="2027-03-01" />
+<flux:calendar open-to="2027-04-01" />
 ```
 
 If you want the calendar to always use the open-to date, you can add the force-open-to attribute.
 
 ```blade
-<flux:calendar open-to="2027-03-01" force-open-to />
+<flux:calendar open-to="2027-04-01" force-open-to />
 ```
 
 ## Week numbers
@@ -385,6 +385,7 @@ $orders = Order::whereBetween('created_at', $range)->get();
 | mode | Selection mode. Options: single (default), multiple, range. |
 | min | Earliest selectable date. Can be a date string or "today". |
 | max | Latest selectable date. Can be a date string or "today". |
+| unavailable | Comma-separated list of dates (in Y-m-d format) that cannot be selected. |
 | size | Calendar size. Options: base (default), xs, sm, lg, xl, 2xl. |
 | start-day | The day of the week to start the calendar on. Options: 0 (Sunday) to 6 (Saturday). Default: based on the user's locale. |
 | months | Number of months to display. Default: 1 for single/multiple modes, 2 for range mode. |

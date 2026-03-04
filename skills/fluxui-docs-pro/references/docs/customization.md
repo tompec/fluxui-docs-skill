@@ -69,11 +69,3 @@ Now, you can continue using the checkbox component like normal, but the publishe
 ## Global style overrides
 
 Most HTML elements used inside flux component have a data-flux-\* attribute. You can use this attribute to override any styles you'd like to. Here's an example of using Tailwind's @apply directive to change the default background color of all buttons:
-
-```
-<style>
-    [data-flux-button] {
-        @apply bg-zinc-800 dark:bg-zinc-400 hover:bg-zinc-700 dark:hover:bg-zinc-300;
-    }
-</style>
-```

@@ -23,9 +23,24 @@ When working with large result sets, the pagination component automatically adap
 <flux:pagination :paginator="$orders" />
 ```
 
+## Scroll to top
+
+Use the scroll-to prop to scroll the page when a pagination button is clicked. By default, it scrolls to the body element.
+
+```blade
+<flux:pagination :paginator="$orders" scroll-to />
+```
+
+You can also target a specific element by passing a CSS selector.
+
+```blade
+<flux:pagination :paginator="$orders" scroll-to="#table" />
+```
+
 ## Reference
 
 ### flux:pagination
 | Prop | Description |
 | --- | --- |
 | paginator | The paginator instance to display. |
+| scroll-to | Scroll to an element when a pagination button is clicked. Pass a CSS selector to target a specific element. Default: body. |

@@ -55,6 +55,16 @@ You can also trigger a toast from Alpine directly using Flux's magic methods:
 
 Or you can use the window.Flux global object to trigger a toast from any JavaScript in your application:
 
+```
+<script>
+    let button = document.querySelector('...')
+
+    button.addEventListener('alpine:init', () => {
+        Flux.toast('Your changes have been saved.')
+    })
+</script>
+```
+
 Both $flux and window.Flux support the following method parameter signatures:
 
 ```

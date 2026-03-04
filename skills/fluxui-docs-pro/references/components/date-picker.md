@@ -17,7 +17,7 @@ Use date inputs instead of date pickers for far-future or past events such as bi
 Set the initial selected date using the value prop with a Y-m-d formatted date string:
 
 ```blade
-<flux:date-picker value="2026-02-10" />
+<flux:date-picker value="2026-03-04" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -71,7 +71,7 @@ Enable selection of date ranges for reporting, booking systems, or any scenario 
 Set the initial range using the value prop with a start and end date separated by a forward slash:
 
 ```blade
-<flux:date-picker mode="range" value="2026-02-02/2026-02-06" />
+<flux:date-picker mode="range" value="2026-03-02/2026-03-06" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -235,7 +235,7 @@ When a user selects a custom date range that doesn't match any other preset, the
 Disable specific dates from being selected. Useful for blocking out holidays, showing booked dates, or indicating unavailable time slots.
 
 ```blade
-<flux:date-picker unavailable="2026-02-09,2026-02-11" />
+<flux:date-picker unavailable="2026-03-03,2026-03-05" />
 ```
 
 ## With today shortcut
@@ -270,13 +270,13 @@ By deafult the first day of the week will be automatically set based on the user
 Set the date that the date picker will open to, if there is no selected date.
 
 ```blade
-<flux:date-picker open-to="2027-03-01" />
+<flux:date-picker open-to="2027-04-01" />
 ```
 
 If you want the date picker to always use the open-to date, you can add the force-open-to attribute.
 
 ```blade
-<flux:date-picker open-to="2027-03-01" force-open-to />
+<flux:date-picker open-to="2027-04-01" force-open-to />
 ```
 
 ## Week numbers
@@ -486,6 +486,7 @@ $this->range->preset();
 | max-range | Maximum number of days that can be selected in range mode. |
 | min | Earliest selectable date. Can be a date string or "today". |
 | max | Latest selectable date. Can be a date string or "today". |
+| unavailable | Comma-separated list of dates (in Y-m-d format) that cannot be selected. |
 | open-to | Set the date that the date picker will open to, if there is no selected date. |
 | force-open-to | If true, forces the date picker to open to the open-to date regardless of the selected date. Default: false. |
 | months | Number of months to display. Default: 1 in single mode, 2 in range mode. |

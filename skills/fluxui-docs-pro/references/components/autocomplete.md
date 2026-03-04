@@ -40,7 +40,7 @@ If you need to show a label but store a value (e.g., showing a user's name but s
 | viewable | For password inputs, if true, displays a toggle to show/hide the password. |
 | as | Render the input as a different element. Options: button. Default: input. |
 | container:class | Additional CSS classes applied to the autocomplete container. Useful for setting height constraints like max-h-80. |
-| class:input | CSS classes applied directly to the input element instead of the input wrapper. |
+| input:class | CSS classes applied directly to the input element instead of the input wrapper. |
 
 | Slot | Description |
 | --- | --- |

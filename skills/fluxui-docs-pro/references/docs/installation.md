@@ -24,7 +24,7 @@ Version 3.7.0 or later
 
 Tailwind CSS
 
-Version 4.1 or later
+Version 4.2 or later
 
 ](https://tailwindcss.com/docs/installation)
 
@@ -62,13 +62,14 @@ Now, add the @fluxAppearance and @fluxScripts Blade directives to your layout fi
 
 <body>
     ...
+    @livewireScripts
     @fluxScripts
 </body>
 ```
 
 The last step is to set up Tailwind CSS. Flux uses Tailwind CSS for its default styling.
 
-*Flux v2.0 requires Tailwind CSS v4.1 or later.*
+*Flux v2.0 requires Tailwind CSS v4.2 or later.*
 
 If you already have Tailwind installed in your project, just add the following configuration to your resources/css/app.css file:
 

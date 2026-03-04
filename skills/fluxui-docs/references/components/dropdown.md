@@ -294,7 +294,7 @@ A complex menu component that supports keyboard navigation, submenus, checkboxes
 ### flux:menu.separator
 A horizontal line that separates menu items.
 
-### flux:menu.checkbox-group
+### flux:menu.checkbox.group
 | Prop | Description |
 | --- | --- |
 | wire:model | Binds the checkbox group to a Livewire property. See the wire:model documentation for more information. |

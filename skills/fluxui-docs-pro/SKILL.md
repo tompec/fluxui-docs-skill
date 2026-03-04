@@ -56,6 +56,7 @@ Use `components_used` to find related components and real-world usage patterns.
 - **[Pillbox](references/components/pillbox.md)**: A multi-select component that displays selected items as removable "pills" that expand the input...
 - **[Popover](references/components/popover.md)**: Show extra content in a popup on click or hover.
 - **[Profile](references/components/profile.md)**: Display a user's profile with an avatar and optional name in a compact, interactive component.
+- **[Progress](references/components/progress.md)**: A simple progress bar to indicate completion or loading status.
 - **[Radio](references/components/radio.md)**: Select one option from a set of mutually exclusive choices. Perfect for single-choice questions a...
 - **[Select](references/components/select.md)**: Choose a single option from a dropdown list.
 - **[Separator](references/components/separator.md)**: Visually divide sections of content or groups of items.
@@ -67,6 +68,7 @@ Use `components_used` to find related components and real-world usage patterns.
 - **[Text](references/components/text.md)**: Consistent typographical components like text and link.
 - **[Textarea](references/components/textarea.md)**: Capture multi-line text input from users. Ideal for comments, descriptions, and feedback.
 - **[Time picker](references/components/time-picker.md)**: Allow users to select specific times for scheduling events or setting appointments. Perfect for t...
+- **[Timeline](references/components/timeline.md)**: Display a series of events or steps in a vertical or horizontal timeline.
 - **[Toast](references/components/toast.md)**: A message that provides feedback to users about an action or event, often temporary and dismissible.
 - **[Tooltip](references/components/tooltip.md)**: Provide additional information when users hover over or focus on an element.
 
