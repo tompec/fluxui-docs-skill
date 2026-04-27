@@ -179,11 +179,11 @@ You can now run composer install and it should automatically authenticate the Fl
 
 ## Activating using Laravel Forge
 
-If you are using Laravel Forge, you can take advantage of their built in [Packages](https://forge.laravel.com/docs/sites/packages.html) feature for authenticating private composer packages.
+If you are using Laravel Forge, you can take advantage of their built in [Composer credentials](https://forge.laravel.com/docs/resources/packages) feature for authenticating private composer packages.
 
-Laravel Forge allows you to manage packages on a server or site level. If you have multiple sites using Flux, then it's recommended to manage Packages on the server level.
+Laravel Forge allows you to manage Composer credentials on a server or site level. If you have multiple sites using Flux, then it's recommended to manage Composer credentials on the server level.
 
-To authenticate Flux, head over to the packages page on either the server or site. You will then see the following:
+To authenticate Flux, head over to the Composer credentials section (**Runtime > PHP** on the server, or **Settings > Composer** on a site). You will then see the following:
 
 ![Laravel Forge Packages](/img/forge-activation.png)
 
@@ -195,7 +195,7 @@ Click the "Add Credential" button to authenticate with a new private composer pa
 
 Finally, click the "Save" button. You should now be authenticated with the Flux private composer server and be able install Flux using composer require livewire/flux-pro
 
-For more information, please refer to the [Laravel Forge Packages documentation](https://forge.laravel.com/docs/sites/packages.html).
+For more information, please refer to the [Laravel Forge Packages documentation](https://forge.laravel.com/docs/resources/packages).
 
 ## Activating using Laravel Cloud
 
@@ -259,14 +259,14 @@ composer config http-basic.composer.fluxui.dev "${FLUX_USERNAME}" "${FLUX_LICENS
 
 If you run into problems loading Flux's JavaScript and CSS assets, you may need to configure your nginx server to allow for this.
 
-By default, Flux exposes two routes in your application to serve its assets from: /flux/flux.js and /flux/flux.css.
+By default, Flux exposes a few routes in your application to serve its assets from, such as /flux/flux.js, /flux/flux.css, and /flux/editor.js.
 
-This is fine for most applications, however, if you are using nginx with a custom configuration, you may receive a 404 from this endpoint.
+This is fine for most applications, however, if you are using nginx with a custom configuration, you may receive a 404 from these endpoints.
 
 To fix this issue, you can add the following to your nginx configuration:
 
 ```
-location ~* ^/flux/flux(\.min)?\.(js|css)$ {
+location ~* ^/flux/(flux|editor)(\.min)?\.(js|css)$ {
     expires off;
     try_files $uri $uri/ /index.php?$query_string;
 }

@@ -52,6 +52,7 @@ Use `components_used` to find related components and real-world usage patterns.
 - **[Table](references/components/table.md)**: Display structured data in a condensed, searchable format.
 - **[Text](references/components/text.md)**: Consistent typographical components like text and link.
 - **[Textarea](references/components/textarea.md)**: Capture multi-line text input from users. Ideal for comments, descriptions, and feedback.
+- **[Toast](references/components/toast.md)**: A message that provides feedback to users about an action or event, often temporary and dismissible.
 - **[Tooltip](references/components/tooltip.md)**: Provide additional information when users hover over or focus on an element.
 
 ## Docs

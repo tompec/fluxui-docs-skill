@@ -129,7 +129,7 @@ public $search = '';
 
 public $selectedTags = [];
 
-public function createProject()
+public function createTag()
 {
     $tag = Tag::create([
         'name' => $this->search,

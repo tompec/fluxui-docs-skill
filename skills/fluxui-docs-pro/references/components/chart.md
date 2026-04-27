@@ -43,9 +43,9 @@ use Livewire\Component;
 class Dashboard extends Component
 {
     public array $data = [
-        ['date' => '2026-03-04', 'visitors' => 267],
-        ['date' => '2026-03-03', 'visitors' => 259],
-        ['date' => '2026-03-02', 'visitors' => 269],
+        ['date' => '2026-04-27', 'visitors' => 267],
+        ['date' => '2026-04-26', 'visitors' => 259],
+        ['date' => '2026-04-25', 'visitors' => 269],
         // ...
     ];
 }
@@ -842,7 +842,6 @@ For more detailed information about formatting options, refer to:
 | --- | --- |
 | wire:model | Binds the chart to a Livewire property containing the data to display. See the wire:model documentation for more information. |
 | value | Array of data points for the chart. Each point should be an associative array with named fields. Used when not binding with wire:model. |
-| curve | Default line curve type for all lines in the chart. Options: smooth (default), none. |
 
 | Slot | Description |
 | --- | --- |

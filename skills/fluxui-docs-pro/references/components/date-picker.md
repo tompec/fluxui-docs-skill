@@ -17,7 +17,7 @@ Use date inputs instead of date pickers for far-future or past events such as bi
 Set the initial selected date using the value prop with a Y-m-d formatted date string:
 
 ```blade
-<flux:date-picker value="2026-03-04" />
+<flux:date-picker value="2026-04-27" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -54,11 +54,7 @@ class CreatePost extends Component {
 Attach the date picker to a date input for more precise date selection control.
 
 ```blade
-<flux:date-picker wire:model="date">
-    <x-slot name="trigger">
-        <flux:date-picker.input />
-    </x-slot>
-</flux:date-picker>
+<flux:date-picker type="input" />
 ```
 
 ## Range picker
@@ -71,7 +67,7 @@ Enable selection of date ranges for reporting, booking systems, or any scenario 
 Set the initial range using the value prop with a start and end date separated by a forward slash:
 
 ```blade
-<flux:date-picker mode="range" value="2026-03-02/2026-03-06" />
+<flux:date-picker mode="range" value="2026-04-02/2026-04-06" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -137,8 +133,8 @@ Use separate inputs for start and end dates to provide a clearer interface for d
 <flux:date-picker mode="range">
     <x-slot name="trigger">
         <div class="flex flex-col sm:flex-row gap-6 sm:gap-4">
-            <flux:date-picker.input label="Start" />
-            <flux:date-picker.input label="End" />
+            <flux:date-picker.input variant="custom" label="Start" />
+            <flux:date-picker.input variant="custom" label="End" />
         </div>
     </x-slot>
 </flux:date-picker>
@@ -235,7 +231,7 @@ When a user selects a custom date range that doesn't match any other preset, the
 Disable specific dates from being selected. Useful for blocking out holidays, showing booked dates, or indicating unavailable time slots.
 
 ```blade
-<flux:date-picker unavailable="2026-03-03,2026-03-05" />
+<flux:date-picker unavailable="2026-04-26,2026-04-28" />
 ```
 
 ## With today shortcut
@@ -260,7 +256,7 @@ Display a consistent number of weeks in every month. Prevents layout shifts when
 ```
 
 ## Start day
-By deafult the first day of the week will be automatically set based on the user's locale. You can override this by setting the start-day attribute to any day of the week.
+By default the first day of the week will be automatically set based on the user's locale. You can override this by setting the start-day attribute to any day of the week.
 
 ```blade
 <flux:date-picker start-day="1" />
@@ -270,13 +266,13 @@ By deafult the first day of the week will be automatically set based on the user
 Set the date that the date picker will open to, if there is no selected date.
 
 ```blade
-<flux:date-picker open-to="2027-04-01" />
+<flux:date-picker open-to="2027-05-01" />
 ```
 
 If you want the date picker to always use the open-to date, you can add the force-open-to attribute.
 
 ```blade
-<flux:date-picker open-to="2027-04-01" force-open-to />
+<flux:date-picker open-to="2027-05-01" force-open-to />
 ```
 
 ## Week numbers
@@ -481,6 +477,7 @@ $this->range->preset();
 | --- | --- |
 | wire:model | Binds the date picker to a Livewire property. See the wire:model documentation for more information. |
 | value | Selected date(s). Format depends on mode: single date (Y-m-d) or range (Y-m-d/Y-m-d). |
+| type | Trigger type. Options: button (default), input. |
 | mode | Selection mode. Options: single (default), range. |
 | min-range | Minimum number of days that can be selected in range mode. |
 | max-range | Maximum number of days that can be selected in range mode. |
@@ -500,7 +497,7 @@ $this->range->preset();
 | week-numbers | If true, displays week numbers in the calendar. |
 | selectable-header | If true, displays month and year dropdowns for quick navigation. |
 | with-today | If true, displays a button to quickly navigate to today's date. |
-| with-inputs | If true, displays date inputs at the top of the calendar for manual date entry. |
+| with-inputs | If true, displays date inputs at the top of the calendar for manual date entry. Options: custom (recommended), native (default). custom will become the default in a future version. |
 | with-confirmation | If true, requires confirmation before applying the selected date(s). |
 | with-presets | If true, displays preset date ranges. Use with presets to customize available options. |
 | presets | Space-separated list of preset date ranges to display. Default: today yesterday thisWeek last7Days thisMonth yearToDate allTime. |
@@ -520,12 +517,14 @@ $this->range->preset();
 ### flux:date-picker.input
 | Prop | Description |
 | --- | --- |
+| variant | Input variant. Options: custom (recommended), native (default). custom will become the default in a future version. |
 | label | Label text displayed above the input. When provided, wraps the input in a flux:field component with an adjacent flux:label component. |
 | description | Help text displayed below the input. When provided alongside label, appears between the label and input within the flux:field wrapper. |
 | placeholder | Placeholder text displayed when no date is selected. |
 | clearable | Displays a clear button when a date is selected. |
 | disabled | Prevents user interaction with the input. |
 | invalid | Applies error styling to the input. |
+| size | Size of the input. Options: sm, xs. |
 
 ### flux:date-picker.button
 | Prop | Description |
