@@ -89,6 +89,32 @@ Flux::toast(
 );
 ```
 
+## Links
+Add a link to a toast to give users a clear next step.
+
+```
+Flux::toast(
+    text: 'Invoice created.',
+    link: [
+        'text' => 'View invoice',
+        'href' => route('invoices.show', $invoice),
+        'navigate' => true,
+    ],
+);
+```
+
+The same link options are available when triggering a toast from JavaScript.
+
+```
+$flux.toast('Invoice created.', {
+    link: {
+        text: 'View invoice',
+        href: '/invoices/123',
+        navigate: true,
+    },
+})
+```
+
 ## Variants
 Use the variant prop to change the visual style of the toast.
 
@@ -171,6 +197,7 @@ The PHP method used to trigger toasts from Livewire components.
 | text | Main content text of the toast. |
 | variant | Visual style. Options: success, warning, danger. |
 | duration | Duration in milliseconds. Use 0 for permanent toasts. Default: 5000. |
+| link | Optional link configuration. Supports text, href, target, rel, download, and navigate. |
 
 ### $flux.toast()
 The Alpine.js magic method used to trigger toasts from Alpine components. It can be used in two ways:
@@ -191,4 +218,4 @@ $flux.toast({
 | Parameter | Description |
 | --- | --- |
 | message | A string containing the toast message. When using this simple form, the message becomes the toast's text content. |
-| options | Alternatively, an object containing: - heading: Optional title text - text: Main message text - variant: Visual style (success, warning, danger) - duration: Display time in milliseconds |
+| options | Alternatively, an object containing: - heading: Optional title text - text: Main message text - variant: Visual style (success, warning, danger) - duration: Display time in milliseconds - link: Optional link configuration with text, href, target, rel, download, and navigate |

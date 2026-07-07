@@ -79,8 +79,8 @@ By default, tooltips on disabled buttons won't be triggered because pointer even
 | position | Position of the tooltip relative to the trigger element. Options: top (default), right, bottom, left. |
 | align | Alignment of the tooltip. Options: center (default), start, end. |
 | disabled | Prevents user interaction with the tooltip. |
-| gap | Spacing between the trigger element and the tooltip. Default: 5px. |
-| offset | Offset of the tooltip from the trigger element. Default: 0px. |
+| gap | Spacing in pixels between the trigger element and the tooltip. Default: 5. |
+| offset | Offset in pixels of the tooltip from the trigger element. Default: 0. |
 | toggleable | Makes the tooltip clickable instead of hover-only. Useful for touch devices. |
 | interactive | Uses the proper ARIA attributes (aria-expanded and aria-controls) to signal that the tooltip has interactive content. |
 | kbd | Keyboard shortcut hint displayed at the end of the tooltip. |

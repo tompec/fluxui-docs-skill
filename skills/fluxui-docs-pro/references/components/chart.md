@@ -43,9 +43,9 @@ use Livewire\Component;
 class Dashboard extends Component
 {
     public array $data = [
-        ['date' => '2026-04-27', 'visitors' => 267],
-        ['date' => '2026-04-26', 'visitors' => 259],
-        ['date' => '2026-04-25', 'visitors' => 269],
+        ['date' => '2026-07-07', 'visitors' => 267],
+        ['date' => '2026-07-06', 'visitors' => 259],
+        ['date' => '2026-07-05', 'visitors' => 269],
         // ...
     ];
 }
@@ -307,7 +307,7 @@ Flux charts support live summaries, which are updated as the user hovers over th
 ```blade
 <flux:card>
     <flux:chart class="grid gap-6" wire:model="data">
-        <flux:chart.summary class="flex gap-12">
+        <flux:chart.summary class="flex flex-col gap-6 sm:flex-row sm:gap-12">
             <div>
                 <flux:text>Today</flux:text>
 

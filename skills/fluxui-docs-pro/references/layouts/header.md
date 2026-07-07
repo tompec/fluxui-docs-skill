@@ -12,7 +12,11 @@ Layouts
 
 Components
 
-[Accordion](/components/accordion) [Autocomplete](/components/autocomplete) [Avatar](/components/avatar) [Badge](/components/badge) [Brand](/components/brand) [Button](/components/button) [Breadcrumbs](/components/breadcrumbs) [Calendar](/components/calendar) [Callout](/components/callout) [Card](/components/card) [Chart](/components/chart) [Checkbox](/components/checkbox) [Color picker
+[Accordion](/components/accordion) [Autocomplete](/components/autocomplete) [Avatar](/components/avatar) [Badge](/components/badge) [Brand](/components/brand) [Button](/components/button) [Breadcrumbs](/components/breadcrumbs) [Calendar](/components/calendar) [Callout](/components/callout) [Card](/components/card) [Carousel
+
+New
+
+](/components/carousel)[Chart](/components/chart) [Checkbox](/components/checkbox) [Color picker
 
 New
 
