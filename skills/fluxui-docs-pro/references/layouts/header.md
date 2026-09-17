@@ -2,39 +2,7 @@
 
 A full-width top navigation layout for your application.
 
-Guides
-
-[Installation](/docs/installation) [Upgrade guide](/docs/upgrading) [Principles](/docs/principles) [Patterns](/docs/patterns) [Theming](/docs/theming) [Dark mode](/docs/dark-mode) [Customization](/docs/customization) [Help](/docs/help)
-
-Layouts
-
-[Header](/layouts/header) [Sidebar](/layouts/sidebar)
-
-Components
-
-[Accordion](/components/accordion) [Autocomplete](/components/autocomplete) [Avatar](/components/avatar) [Badge](/components/badge) [Brand](/components/brand) [Button](/components/button) [Breadcrumbs](/components/breadcrumbs) [Calendar](/components/calendar) [Callout](/components/callout) [Card](/components/card) [Carousel
-
-New
-
-](/components/carousel)[Chart](/components/chart) [Checkbox](/components/checkbox) [Color picker
-
-New
-
-](/components/color-picker)[Command](/components/command) [Context](/components/context) [Composer](/components/composer) [Date picker](/components/date-picker) [Dropdown](/components/dropdown) [Editor](/components/editor) [Field](/components/field) [File upload](/components/file-upload) [Flag
-
-New
-
-](/components/flag)[Heading](/components/heading) [Icon](/components/icon) [Input](/components/input) [Kanban](/components/kanban) [Modal](/components/modal) [Navbar](/components/navbar) [OTP Input](/components/otp-input) [Pagination](/components/pagination) [Phone
-
-New
-
-](/components/phone)[Pillbox](/components/pillbox) [Popover](/components/popover) [Profile](/components/profile) [Progress](/components/progress) [Radio](/components/radio) [Select](/components/select) [Separator](/components/separator) [Skeleton](/components/skeleton) [Slider](/components/slider) [Switch](/components/switch) [Table](/components/table) [Tabs](/components/tabs) [Text](/components/text) [Textarea](/components/textarea) [Time picker](/components/time-picker) [Timeline](/components/timeline) [Toast](/components/toast) [Toggle
-
-New
-
-](/components/toggle)[Tooltip](/components/tooltip)
-
- ! !
+! !
 
 [Fullscreen](/demo/header)
 
