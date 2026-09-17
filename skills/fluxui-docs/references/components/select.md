@@ -225,6 +225,19 @@ If you need full control over the search field inside the listbox, you can use t
 </flux:select>
 ```
 
+### Search keywords
+Add keywords to an option to make it searchable by additional terms while keeping its label clean. Searching for "apple", "orange", or "pear" below will show "Fruit".
+
+```blade
+<flux:select wire:model="category" variant="listbox" searchable placeholder="Choose category...">
+    <flux:select.option value="fruit" keywords="apple orange pear">Fruit</flux:select.option>
+    <flux:select.option value="vegetables" keywords="carrot broccoli spinach">Vegetables</flux:select.option>
+    <flux:select.option value="drinks" keywords="coffee tea juice">Drinks</flux:select.option>
+</flux:select>
+```
+
+Keywords supplement the option's label using the same case-insensitive and accent-insensitive search. They work with Flux's built-in filtering for searchable listboxes and comboboxes.
+
 ## Multiple select
 Allow your users to select multiple options from a list of options.
 
@@ -555,6 +568,7 @@ Use the modal prop to specify a name of a modal and handle more complex creation
 | value | Value associated with the option. |
 | label | Text content displayed for the option. |
 | selected-label | Text content displayed when the option is selected. |
+| keywords | Additional search terms matched alongside the option's label when using built-in filtering (searchable listbox and combobox variants only). |
 | icon | Name of the icon displayed at the start of the option (listbox and combobox variants only). |
 | icon:variant | Icon variant. Options: outline, solid, mini, micro. Default: mini. |
 | icon:class | CSS classes applied to the icon. |

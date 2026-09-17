@@ -12,6 +12,26 @@ Use a toggle for icon-sized settings and modes. Use a [switch](/components/switc
 <flux:toggle wire:model.live="fastMode" icon="bolt" tooltip="Fast mode" />
 ```
 
+## Saving changes
+Pair a wire:model binding with wire:change to save the new value in one request. While that request is running, Toggle automatically shows a loading indicator and prevents further interaction.
+
+```blade
+<flux:toggle wire:model="active" wire:change="save" icon="light-bulb" tooltip="Active project" />
+```
+
+In your component, persist the current value in the save method:
+
+```
+public bool $active = false;
+
+public function save(): void
+{
+    $this->project->update([
+        'active' => $this->active,
+    ]);
+}
+```
+
 ## Sizes
 Use the size prop to fit toggles into different interface densities.
 
@@ -103,6 +123,7 @@ Use the on:label and off:label props to show different text for each state.
 | --- | --- |
 | data-flux-toggle | Applied to the root element for styling and identification. |
 | data-checked | Applied when the toggle is on. |
+| data-loading | Applied while a Livewire request triggered by the toggle is running. Flux shows a loading indicator and prevents further interaction. |
 
 | Slot | Description |
 | --- | --- |

@@ -44,9 +44,9 @@ class Dashboard extends Component
 {
     <!-- MARKDOWN:REPLACE:START -->
     public array $data = [
-        ['date' => '2026-09-08', 'visitors' => 267],
-        ['date' => '2026-09-07', 'visitors' => 259],
-        ['date' => '2026-09-06', 'visitors' => 269],
+        ['date' => '2026-09-17', 'visitors' => 267],
+        ['date' => '2026-09-16', 'visitors' => 259],
+        ['date' => '2026-09-15', 'visitors' => 269],
         // ...
     ];
     <!-- MARKDOWN:REPLACE:END

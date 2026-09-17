@@ -12,12 +12,13 @@ A consistent heading component for your application.
 ```
 
 ## Sizes
-Flux offers three different heading sizes that should cover most use cases in your app.
+Flux offers four different heading sizes that should cover most use cases in your app.
 
 ```blade
 <flux:heading>Default</flux:heading>
 <flux:heading size="lg">Large</flux:heading>
 <flux:heading size="xl">Extra large</flux:heading>
+<flux:heading size="2xl">Extra extra large</flux:heading>
 ```
 
 ## Heading level
@@ -52,7 +53,7 @@ Subheadings can be placed above headings for a more interesting arrangment.
 ### flux:heading
 | Prop | Description |
 | --- | --- |
-| size | Size of the heading. Options: base, lg, xl. Default: base. |
+| size | Size of the heading. Options: base, lg, xl, 2xl. Default: base. |
 | level | HTML heading level. Options: 1, 2, 3, 4. Default: renders as a div if not specified. |
 | accent | If true, applies accent color styling to the heading. |
 

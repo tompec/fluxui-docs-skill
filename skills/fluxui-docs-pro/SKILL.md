@@ -56,6 +56,7 @@ Use `components_used` to find related components and real-world usage patterns.
 - **[Navbar](references/components/navbar.md)**: Arrange navigation links vertically or horizontally.
 - **[OTP Input](references/components/otp-input.md)**: Capture one-time passwords with a series of individual input fields.
 - **[Pagination](references/components/pagination.md)**: Display a series of buttons to navigate through a list of items.
+- **[Phone](references/components/phone.md)**: Capture international phone numbers with country selection, local formatting, and E.164 normaliza...
 - **[Pillbox](references/components/pillbox.md)**: A multi-select component that displays selected items as removable "pills" that expand the input...
 - **[Popover](references/components/popover.md)**: Show extra content in a popup on click or hover.
 - **[Profile](references/components/profile.md)**: Display a user's profile with an avatar and optional name in a compact, interactive component.

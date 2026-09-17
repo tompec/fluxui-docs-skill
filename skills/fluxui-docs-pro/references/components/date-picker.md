@@ -17,7 +17,7 @@ Use date inputs instead of date pickers for far-future or past events such as bi
 Set the initial selected date using the value prop with a Y-m-d formatted date string:
 
 ```blade
-<flux:date-picker value="2026-09-08" />
+<flux:date-picker value="2026-09-17" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -231,7 +231,7 @@ When a user selects a custom date range that doesn't match any other preset, the
 Disable specific dates from being selected. Useful for blocking out holidays, showing booked dates, or indicating unavailable time slots.
 
 ```blade
-<flux:date-picker unavailable="2026-09-07,2026-09-09" />
+<flux:date-picker unavailable="2026-09-16,2026-09-18" />
 ```
 
 ## With today shortcut

@@ -11,7 +11,7 @@ A flexible calendar component for date selection. Supports single dates, multipl
 Set the initial selected date using the value prop with a Y-m-d formatted date string:
 
 ```blade
-<flux:calendar value="2026-09-08" />
+<flux:calendar value="2026-09-17" />
 ```
 
 You can also bind the selection to a Livewire property using wire:model:
@@ -170,7 +170,7 @@ Create a non-interactive calendar for display purposes.
 ```blade
 <flux:calendar
     static
-    value="2026-09-08"
+    value="2026-09-17"
     size="xs"
     :navigation="false"
 />
@@ -180,7 +180,7 @@ Create a non-interactive calendar for display purposes.
 Restrict the selectable date range by setting minimum and maximum boundaries.
 
 ```blade
-<flux:calendar max="2026-09-08" />
+<flux:calendar max="2026-09-17" />
 ```
 
 You can also use the convenient "today" shorthand:
@@ -197,7 +197,7 @@ You can also use the convenient "today" shorthand:
 Disable specific dates from being selected. Useful for blocking out holidays, showing booked dates, or indicating unavailable time slots.
 
 ```blade
-<flux:calendar unavailable="2026-09-07,2026-09-09" />
+<flux:calendar unavailable="2026-09-16,2026-09-18" />
 ```
 
 ## With today shortcut

@@ -24,7 +24,11 @@ New
 
 New
 
-](/components/flag)[Heading](/components/heading) [Icon](/components/icon) [Input](/components/input) [Kanban](/components/kanban) [Modal](/components/modal) [Navbar](/components/navbar) [OTP Input](/components/otp-input) [Pagination](/components/pagination) [Pillbox](/components/pillbox) [Popover](/components/popover) [Profile](/components/profile) [Progress](/components/progress) [Radio](/components/radio) [Select](/components/select) [Separator](/components/separator) [Skeleton](/components/skeleton) [Slider](/components/slider) [Switch](/components/switch) [Table](/components/table) [Tabs](/components/tabs) [Text](/components/text) [Textarea](/components/textarea) [Time picker](/components/time-picker) [Timeline](/components/timeline) [Toast](/components/toast) [Toggle
+](/components/flag)[Heading](/components/heading) [Icon](/components/icon) [Input](/components/input) [Kanban](/components/kanban) [Modal](/components/modal) [Navbar](/components/navbar) [OTP Input](/components/otp-input) [Pagination](/components/pagination) [Phone
+
+New
+
+](/components/phone)[Pillbox](/components/pillbox) [Popover](/components/popover) [Profile](/components/profile) [Progress](/components/progress) [Radio](/components/radio) [Select](/components/select) [Separator](/components/separator) [Skeleton](/components/skeleton) [Slider](/components/slider) [Switch](/components/switch) [Table](/components/table) [Tabs](/components/tabs) [Text](/components/text) [Textarea](/components/textarea) [Time picker](/components/time-picker) [Timeline](/components/timeline) [Toast](/components/toast) [Toggle
 
 New
 
